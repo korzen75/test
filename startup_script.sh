@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 
 # Create dir if 
-DIR="/home/ekobushka"
-if [ ! -d "$DIR" ]; then
-    mkdir $DIR
-fi
+#DIR="/home/ekobushka"
+#if [ ! -d "$DIR" ]; then
+#    mkdir $DIR
+#fi
 
 # Add repository MongoDB
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
@@ -25,7 +25,7 @@ sudo systemctl enable mongod
 # sudo systemctl status mongod
 
 # Deploy app
-cd $DIR
+cd ~/
 git clone https://github.com/Otus-DevOps-2017-11/reddit.git 
 cd reddit && bundle install
 puma -d
